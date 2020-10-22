@@ -1,0 +1,15 @@
+{
+  "name": "netcracker-internship",
+  "version": "1.0.0",
+  "description": "My homeworks and projects",
+  "main": "intex.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitriev Vladislav",
+  "license": "ISC",
+  "dependencies": {
+    "static-server": "^2.2.1"
+  }
+}
