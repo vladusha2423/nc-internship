@@ -1,29 +1,9 @@
-let StaticServer = require('static-server');
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
 
-let server = new StaticServer({
-    rootPath: '.',
-    port: 5000,
-    name: 'nc-internship-static-server',
-    host: 'localhost',
-    cors: '*',
-    followSymlink: true,
-    templates: {
-        index: 'src/views/index.html',
-    }
-});
-
-server.start(function () {
-    console.log('Server listening to', server.port);
-});
-
-server.on('request', function (req, res) {
-
-});
-
-server.on('symbolicLink', function (link, file) {
-    console.log('File', link, 'is a link to', file);
-});
-
-server.on('response', function (req, res, err, file, stat) {
-
-});
+express()
+    .use(express.static(path.join(__dirname)))
+    .set('views', path.join(__dirname, 'src/views'))
+    .get('/', (req, res) => res.sendfile('src/views/index.html'))
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
