@@ -1,0 +1,56 @@
+.headline{
+  width: calc(100% - 40px);
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #90919d;
+  padding: 5px 20px;
+
+  &__left-corner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+
+  }
+
+  &__city{
+    font-weight: 500;
+    color: #7b7c86;
+    margin-bottom: 5px;
+
+    &:hover{
+      color: #c00;
+    }
+
+    & > .icon{
+      position: relative;
+      top: 4px;
+    }
+  }
+  &__datetime{
+    margin-left: 20px;
+
+    & > a{
+      color: #90919d;
+      &:hover{
+        color: #c00;
+      }
+    }
+  }
+  &__make-start{
+    margin-left: 20px;
+
+    &:hover{
+      color: #c00;
+    }
+
+  }
+
+  &__right-corner{
+
+  }
+}

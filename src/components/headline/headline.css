@@ -1,0 +1,46 @@
+.headline {
+  width: calc(100% - 40px);
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #90919d;
+  padding: 5px 20px;
+}
+.headline__left-corner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+}
+.headline__city {
+  font-weight: 500;
+  color: #7b7c86;
+  margin-bottom: 5px;
+}
+.headline__city:hover {
+  color: #c00;
+}
+.headline__city > .icon {
+  position: relative;
+  top: 4px;
+}
+.headline__datetime {
+  margin-left: 20px;
+}
+.headline__datetime > a {
+  color: #90919d;
+}
+.headline__datetime > a:hover {
+  color: #c00;
+}
+.headline__make-start {
+  margin-left: 20px;
+}
+.headline__make-start:hover {
+  color: #c00;
+}
+
+/*# sourceMappingURL=headline.css.map */
