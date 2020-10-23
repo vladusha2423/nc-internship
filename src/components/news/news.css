@@ -1,0 +1,28 @@
+.news {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.news__tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.news__tab-item {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6da2e1;
+}
+.news__tab-item_first {
+  color: #0054b9;
+}
+.news__tab-item_last {
+  color: #ee7b00;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=news.css.map */
