@@ -2,15 +2,19 @@
   "name": "netcracker-internship",
   "version": "1.0.0",
   "description": "My homeworks and projects",
-  "main": "intex.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "start:dev": "gulp",
+    "build": "gulp build"
   },
   "author": "Dmitriev Vladislav",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^2.26.13",
     "express": "^4.17.1",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-less": "^4.0.1"
   }
 }
