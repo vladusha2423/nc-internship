@@ -1,0 +1,62 @@
+.headline{
+  width: 100%;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #90919d;
+  padding-left: 30px;
+  padding-right: 18px;
+  margin-top: 8px;
+
+  &__left-corner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  &__city{
+    font-weight: 400;
+    color: black;
+    margin-bottom: 4px;
+
+    &:hover, &:hover &-icon{
+      color: #c00;
+    }
+
+    & > &-icon{
+      position: relative;
+      top: 3px;
+    }
+  }
+  &__city-icon{
+    display: inline-block;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32'%3E%3Cg fill='none'%3E%3Cpath fill='%23404040' d='M13.07 3.58l-4 9.98a.5.5 0 0 1-.95-.06L7 9 2.5 7.88a.5.5 0 0 1-.06-.95l9.98-4a.5.5 0 0 1 .65.65z'/%3E%3Cpath fill='%23F12727' d='M13.07 19.58l-4 9.98a.5.5 0 0 1-.95-.06L7 25l-4.5-1.12a.5.5 0 0 1-.06-.95l9.98-4a.5.5 0 0 1 .65.65z'/%3E%3C/g%3E%3C/svg%3E");
+    width: 16px;
+    height: 16px;
+  }
+  &__make-start{
+    margin-left: 16px;
+    color: black;
+
+    &:hover{
+      color: #c00;
+    }
+
+  }
+  &__confidence{
+    margin-left: 16px;
+
+    &:hover{
+      color: #c00;
+    }
+
+  }
+
+  &__right-corner{
+
+  }
+}

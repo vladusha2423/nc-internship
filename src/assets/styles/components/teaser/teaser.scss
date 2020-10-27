@@ -1,0 +1,23 @@
+.teaser{
+  width: 248px;
+  position: absolute;
+  bottom: 0;
+  left: 530px;
+  margin-left: 26px;
+  &__image{
+    background: url('https://avatars.mds.yandex.net/get-banana/49904/x25DiU8KJX7rFofibrQbBj4Jd_banana_20161021_woman2x.png/orig') center center;
+    background-size: cover;
+    width: 120px;
+    height: 90px;
+  }
+  &__title{
+    color: #0054b9;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 14px;
+  }
+  &__description{
+    font-size: 13px;
+    margin-top: 8px;
+  }
+}

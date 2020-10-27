@@ -1,0 +1,11 @@
+.outside-widgets {
+  width: 100%;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+}
+.outside-widgets__item {
+  width: 250px;
+}
+
+/*# sourceMappingURL=outside-widget.css.map */

@@ -1,0 +1,88 @@
+.search{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+
+  &__container{
+    width: 918px;
+    margin: auto;
+    position: relative;
+  }
+
+  &__logo{
+    position: absolute;
+    left: -145px;
+    top: -34px;
+    width: 140px;
+    height: 100px;
+    background: url(//yastatic.net/s3/home-static/_/x/Q/xk8YidkhGjIGOrFm_dL5781YA.svg) no-repeat;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  &__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2px;
+  }
+
+  &__input{
+    width: 715px;
+    height: 30px;
+    border: 0;
+    font-size: 16px;
+    padding-left: 10px;
+    &:focus{
+      outline: none;
+    }
+  }
+
+  &__input-container{
+    background: #ffd633;
+    padding: 2px;
+    //border-bottom-left-radius: 8px;
+    //border-top-left-radius: 8px;
+  }
+
+  &__button{
+    position: relative;
+    left: 2px;
+    top: 1px;
+    width: 72px;
+    height: 30px;
+    background: transparent;
+    border: 0;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  &__angle{
+    width: 0;
+    height: 0;
+    border-top: 17.5px solid transparent;
+    border-left: 8px solid #ffd633;
+    border-bottom: 17.5px solid transparent;
+  }
+
+  &__rounded-arrow{
+    position: relative;
+    top: 1px;
+    right: 3px;
+    fill: #ffd633;
+    stroke: #ffd633;
+  }
+
+  &__slogan{
+    color: black;
+    margin-top: 8px;
+    font-size: 13px;
+    a{
+      color: #767676;
+    }
+  }
+}

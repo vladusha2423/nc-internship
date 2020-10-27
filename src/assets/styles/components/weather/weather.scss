@@ -1,0 +1,10 @@
+.weather{
+  &__title{
+    display: flex;
+    flex-direction: row;
+  }
+  &__content{
+    display: flex;
+    flex-direction: row;
+  }
+}

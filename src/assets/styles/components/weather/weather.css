@@ -1,0 +1,10 @@
+.weather__title {
+  display: flex;
+  flex-direction: row;
+}
+.weather__content {
+  display: flex;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=weather.css.map */

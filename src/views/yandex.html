@@ -6,30 +6,35 @@
     <script src="https://kit.fontawesome.com/7b42635023.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/assets/fonts/Helvetica_Neue/stylesheet.css">
     <link rel="stylesheet" href="src/assets/fonts/YS_Text/stylesheet.css">
-    <link rel="stylesheet" href="src/components/yandex/yandex.css">
-    <link rel="stylesheet" href="src/components/headline/headline.css">
-    <link rel="stylesheet" href="src/components/icon/icon.css">
-    <link rel="stylesheet" href="src/components/search/search.css">
-    <link rel="stylesheet" href="src/components/services/services.css">
-    <link rel="stylesheet" href="src/components/widgets/widgets.css">
-    <link rel="stylesheet" href="src/components/news/news.css">
+    <link rel="stylesheet" href="src/assets/styles/components/yandex/yandex.css">
+    <link rel="stylesheet" href="src/assets/styles/components/headline/headline.css">
+    <link rel="stylesheet" href="src/assets/styles/components/icon/icon.css">
+    <link rel="stylesheet" href="src/assets/styles/components/search/search.css">
+    <link rel="stylesheet" href="src/assets/styles/components/services/services.css">
+    <link rel="stylesheet" href="src/assets/styles/components/widgets/widgets.css">
+    <link rel="stylesheet" href="src/assets/styles/components/news/news.css">
+    <link rel="stylesheet" href="src/assets/styles/components/teaser/teaser.css">
+    <link rel="stylesheet" href="src/assets/styles/components/outside-widget/outside-widget.css">
+    <link rel="stylesheet" href="src/assets/styles/components/weather/weather.css">
 </head>
 <body>
 
 <div class="headline">
     <div class="headline__left-corner">
         <div class="headline__city">
-            <div class="icon icon_location icon_size_s"></div>
+            <div class="headline__city-icon"></div>
             <a href="https://yandex.ru/tune/geo?retpath=https%3A%2F%2Fyandex.ru%2F&nosync=1">
-                Москва
+                Одинцово
             </a>
-        </div>
-        <div class="headline__datetime">
-            20 октября, вторник <a href="https://yandex.ru/time/">15:53</a>
         </div>
         <div class="headline__make-start">
             <a href="https://yandex.ru/promo/set/portal_safari/home_safari?from=link_morda_safari&utm_medium=link&utm_source=main&utm_campaign=link_morda_S&c=1&banerid=0101003980">
                 Сделать стартовой
+            </a>
+        </div>
+        <div class="headline__confidence">
+            <a href="https://yandex.ru/promo/set/portal_safari/home_safari?from=link_morda_safari&utm_medium=link&utm_source=main&utm_campaign=link_morda_S&c=1&banerid=0101003980">
+                Конфиденциальность
             </a>
         </div>
     </div>
@@ -41,90 +46,172 @@
 </div>
 
 <div class="widgets">
-
-    <div class="news">
-        <div class="news__tabs">
-            <div class="news__tab-item news__tab-item_first">
-                Сейчас в СМИ
+    <div class="widgets__container">
+        <div class="news">
+            <div class="news__tabs">
+                <div class="news__tab-item news__tab-item_first">
+                    Сейчас в СМИ
+                </div>
+                <div class="news__tab-item">
+                    Москва и область
+                </div>
+                <div class="news__tab-item">
+                    Интересное
+                </div>
+                <div class="news__tab-item news__tab-item_last">
+                    Коронавирус
+                </div>
             </div>
-            <div class="news__tab-item">
-                Москва и область
+            <div class="news__time">
+                23.10, 18:33
             </div>
-            <div class="news__tab-item">
-                Интересное
+            <div class="news__list">
+                <div class="news__list-item">
+                    <div class="news__list-icon" style="background: url('https://avatars.mds.yandex.net/get-ynews-logo/50744/1013-1496416510291-square/logo-square') center center; background-size: cover;"></div>
+                    <div class="news__list-text">
+                        Минздрав обещает россиянам бесплатную вакцинацию от коронавируса
+                    </div>
+                </div>
+                <div class="news__list-item">
+                    <div class="news__list-icon" style="background: url('https://avatars.mds.yandex.net/get-ynews-logo/26056/1047-1478692902215-square/logo-square') center center; background-size: cover;"></div>
+                    <div class="news__list-text">
+                        Собянин заявил, что распространение коронавируса в Москве замедляется
+                    </div>
+                </div>
+                <div class="news__list-item">
+                    <div class="news__list-icon" style="background: url('https://avatars.mds.yandex.net/get-ynews-logo/135513/1040-1478692902361-square/logo-square') center center; background-size: cover;"></div>
+                    <div class="news__list-text">
+                        ЦБ сохранил ключевую ставку на уровне 4,25%
+                    </div>
+                </div>
+                <div class="news__list-item">
+                    <div class="news__list-icon" style="background: url('https://avatars.mds.yandex.net/get-ynews-logo/41096/8352-1506595261741-square/logo-square') center center; background-size: cover;"></div>
+                    <div class="news__list-text">
+                        Путин дал рекомендации регионам по коронавирусным ограничениям
+                    </div>
+                </div>
+                <div class="news__list-item">
+                    <div class="news__list-icon" style="background: url('https://avatars.mds.yandex.net/get-ynews-logo/50744/1013-1496416510291-square/logo-square') center center; background-size: cover;"></div>
+                    <div class="news__list-text">
+                        Глава НКР попросил у Путина помощи в урегулировании конфликта в Карабахе
+                    </div>
+                </div>
             </div>
-            <div class="news__tab-item news__tab-item_last">
-                Коронавирус
+            <div class="news__stocks">
+                <span class="news__stocks-link">USD </span>
+                <span class="news__stocks-value">76,20 </span>
+                <span class="news__stocks-cell">-0.38 </span>
+                <span class="news__stocks-link">EUR </span>
+                <span class="news__stocks-value">90,19 </span>
+                <span class="news__stocks-cell">-0,34 </span>
+                <span class="news__stocks-link">НЕФТЬ </span>
+                <span class="news__stocks-value">42,44 </span>
+                <span class="news__stocks-cell">-0,07% </span>
             </div>
         </div>
-        <div class="news__time">
-            23.10, 18:33
-        </div>
-        <div class="news__list">
-            <div class="news__list-item">
-                Минздрав обещает россиянам бесплатную вакцинацию от коронавируса
+        <div class="teaser">
+            <div class="teaser__image">
+                <!--            https://avatars.mds.yandex.net/get-banana/49904/x25DiU8KJX7rFofibrQbBj4Jd_banana_20161021_woman2x.png/orig-->
             </div>
-            <div class="news__list-item">
-                Собянин заявил, что распространение коронавируса в Москве замедляется
+            <div class="teaser__title">
+                Яндекс приглашает на чемпионат
             </div>
-            <div class="news__list-item">
-                ЦБ сохранил ключевую ставку на уровне 4,25%
+            <div class="teaser__description">
+                по программированию
             </div>
-            <div class="news__list-item">
-                Путин дал рекомендации регионам по коронавирусным ограничениям
-            </div>
-            <div class="news__list-item">
-                Глава НКР попросил у Путина помощи в урегулировании конфликта в Карабахе
-            </div>
-        </div>
-        <div class="news__stocks">
-            <span class="news__stocks-link">USD</span>
-            <span class="news__stocks-value">76,20</span>
-            <span class="news__stocks-cell">-0.38</span>
-            <span class="news__stocks-link">EUR</span>
-            <span class="news__stocks-value">90,19</span>
-            <span class="news__stocks-cell">-0,34</span>
-            <span class="news__stocks-link">НЕФТЬ</span>
-            <span class="news__stocks-value">42,44</span>
-            <span class="news__stocks-cell">-0,07</span>
         </div>
     </div>
-
-    <div class="teaser">
-        <div class="teaser__image">
-<!--            https://avatars.mds.yandex.net/get-banana/49904/x25DiU8KJX7rFofibrQbBj4Jd_banana_20161021_woman2x.png/orig-->
-        </div>
-        <div class="teaser__title">
-            Яндекс приглашает на чемпионат
-        </div>
-        <div class="teaser__description">
-            по программированию
-        </div>
-    </div>
-
 </div>
 
 <div class="services">
-    <!-- Это генерится в js-->
+    <div class="services__container">
+        <!-- Это генерится в js-->
+    </div>
 </div>
 
 <div class="search">
-    <a href="https://yandex.ru">
-        <div class="search__logo"></div>
-    </a>
+    <div class="search__container">
+        <a href="https://yandex.ru">
+            <div class="search__logo"></div>
+        </a>
+        <div class="search__wrapper">
+            <div class="search__input-container">
+                <input class="search__input" type="text" placeholder="">
+                <button class="search__button">Найти</button>
+            </div>
+            <div class="search__angle">
 
-    <div class="search__wrapper">
-        <div class="search__input-container">
-            <input class="search__input" type="text" placeholder="Найдётся всё">
-            <button class="search__button">Найти</button>
+            </div>
         </div>
-
-        <div class="search__angle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="46" class="search__rounded-arrow" preserveAspectRatio="none" viewBox="0 0 17 40"><path d="M1 1l1.663.034c1.761 0 3.391.926 4.294 2.438l8.337 13.968a5 5 0 0 1 .002 5.122l-8.34 13.997A5 5 0 0 1 2.66 39L1 38.967z" stroke-width="2"></path><defs><linearGradient id="l" x2="0" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffbb03"></stop><stop offset="1" stop-color="#ffd108"></stop></linearGradient><linearGradient id="h" x2="0" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffa702"></stop><stop offset="1" stop-color="#ffd108"></stop></linearGradient><linearGradient id="a" x2="0" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9801"></stop><stop offset="1" stop-color="#ffc205"></stop></linearGradient></defs></svg>
+        <div class="search__slogan">
+            Найдётся всё. Например, <a href="vk.com/dvv2423">Яндекс.Уроки</a>
         </div>
     </div>
 </div>
 
-<script src="src/components/yandex/yandex.js"></script>
+<div class="outside-widgets">
+    <div class="outside-widgets__item weather">
+        <div class="weather__title">
+            <div class="weather__main-title">
+                Погода
+            </div>
+            <div class="weather__add-title">
+                Карта осадков
+            </div>
+        </div>
+        <div class="weather__content">
+            <div class="weather__icon"></div>
+            <div class="weather__value">
+                +10&#176;
+            </div>
+            <div class="weather__text">
+                <div class="weather__evening">
+                    Вечером +7
+                </div>
+                <div class="weather__night">
+                    Ночью +5
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outside-widgets__item traffic">
+        <div class="traffic__title">
+            <div class="traffic__main-title">
+                Пробки
+            </div>
+        </div>
+        <div class="traffic__content">
+            <div class="traffic__icon"></div>
+            <div class="traffic__value">
+                5
+            </div>
+            <div class="traffic__text">
+                Движение плотное
+            </div>
+        </div>
+    </div>
+    <div class="outside-widgets__item map">
+        <div class="map__title">
+            <div class="map__main-title">
+                Карта Одинцово
+            </div>
+        </div>
+        <div class="map__content">
+            <div class="map__text">
+                <div class="map__metro">
+                    Метро
+                </div>
+                <div class="map__rasp">
+                    Расписание
+                </div>
+                <div class="map__taxi">
+                    Такси
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/assets/styles/components/yandex/yandex.js"></script>
 </body>
 </html>
