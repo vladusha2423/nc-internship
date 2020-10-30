@@ -1,10 +1,17 @@
 .outside-widgets{
+  margin-top: 120px;
   font-family: @font-yandex;
   width: 100%;
-  display: none;
-  flex-direction: row;
-  justify-content: center;
+  &__container{
+    margin: auto;
+    width: 918px;
+    .flex(row,flex-start,flex-start);
+  }
   &__item{
     width: 250px;
+    margin-left: 29px;
+    &:nth-child(1){
+      margin-left: 0;
+    }
   }
 }
