@@ -1,38 +1,33 @@
 .news{
   width: 550px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  .flex(column);
   align-items: flex-start;
 
   &__tabs{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    .flex(row, flex-start, center);
   }
 
   &__tab-item{
     font-size: 16px;
     font-weight: 600;
-    color: #6da2e1;
+    color: @light-blue-widget-title;
     margin-right: 12px;
     letter-spacing: 0.1px;
 
-    &_first{
-      color: #0054b9;
+    &:nth-child(1){
+      color: @blue-widget-title;
       letter-spacing: 0.08px;
     }
 
-    &_last{
-      color: #ee7b00;
+    &:nth-child(4){
+      color: @orange-widget-title;
       font-size: 13px;
       margin-top: 1px;
     }
   }
   &__time{
-    color: #90919d;
+    color: @light-gray-font;
     font-size: 12px;
     margin-top: 9px;
     letter-spacing: 0.8px;
@@ -73,7 +68,7 @@
     margin-right: 3px;
   }
   &__stocks-cell{
-    color: #9b9ca9;
+    color: @light-gray-widget-stock;
     font-weight: 300;
     font-size: 12.5px;
     margin-right: 8px;

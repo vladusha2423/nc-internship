@@ -1,34 +1,37 @@
-.traffic{
-  &__title{
+.traffic {
+  &__title {
     .flex(row, flex-start, flex-end);
   }
-  &__main-title{
+
+  &__main-title {
     font-weight: 500;
-    color: #0054b9;
+    color: @blue-widget-title;
+    letter-spacing: 0.1px;
   }
-  &__add-title{
-    margin-left: 12px;
-    font-size: 13px;
-    color: #0054b9;
+
+  &__content {
+    .flex(row, flex-start, center);
+    margin-top: 10px;
+    margin-left: -1px;
   }
-  &__content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 8px;
-  }
-  &__icon{
+
+  &__icon {
     //
-    width: 36px;
-    height: 32px;
+    width: 34px;
+    height: 31px;
     background-image: url(//yastatic.net/s3/home-static/_/u/4/Rn42zKx5fovZRfrLwwQDJI_-E.svg);
     background-size: cover;
   }
-  &__value{
+
+  &__value {
     font-size: 28px;
+    margin-left: 8px;
+    margin-top: -1px;
   }
-  &__text{
+
+  &__text {
     font-size: 13px;
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-top: -1px;
   }
 }

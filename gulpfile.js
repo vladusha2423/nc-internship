@@ -24,6 +24,10 @@ gulp.task("js", function () {
     return gulp.src("./src/assets/scripts/*.js").pipe(gulp.dest("./dist"));
 });
 
+gulp.task("images", function () {
+    return gulp.src("./src/assets/images/*").pipe(gulp.dest("./dist/images"));
+});
+
 gulp.task("serve", function () {
     browserSync.init({
         server: {
@@ -42,6 +46,6 @@ gulp.task("serve", function () {
     gulp.watch("./dist/*.html").on("change", browserSync.reload);
 });
 
-gulp.task("build", series("less", "js", "html"));
+gulp.task("build", series("less", "js", "images", "html"));
 
-gulp.task("default", series(parallel("html", "less", "js"), "serve"));
+gulp.task("default", series(parallel("html", "less", "js", "images"), "serve"));

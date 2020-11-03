@@ -1,21 +1,38 @@
 .headline{
   font-family: @font-yandex;
-  width: 100%;
+  width: 1177px;
   height: 42px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  .flex(row, space-between, center);
   align-items: center;
-  color: #90919d;
+  color: @light-gray-font;
   padding-left: 30px;
   padding-right: 18px;
   margin-top: 8px;
 
+  &__right-corner{
+    .flex(row, flex-start, center);
+  }
+
+  &__collections{
+    margin-right: 6px;
+  }
+
+  &__notifications{
+    margin-right: 12px;
+    svg{
+      path{
+        fill: @light-gray-headline-icon;
+      }
+    }
+  }
+
+  &__settings{
+    font-size: 13px;
+    color: black;
+  }
+
   &__left-corner{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    .flex(row, flex-start, center);
     font-size: 13px;
   }
 
@@ -25,7 +42,7 @@
     margin-bottom: 4px;
 
     &:hover, &:hover &-icon{
-      color: #c00;
+      color: @red-hover-link;
     }
 
     & > &-icon{
@@ -44,7 +61,7 @@
     color: black;
 
     &:hover{
-      color: #c00;
+      color: @red-hover-link;
     }
 
   }
@@ -52,12 +69,7 @@
     margin-left: 16px;
 
     &:hover{
-      color: #c00;
+      color: @red-hover-link;
     }
-
-  }
-
-  &__right-corner{
-
   }
 }

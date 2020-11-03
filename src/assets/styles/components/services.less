@@ -1,13 +1,12 @@
 .services{
   font-family: @font-yandex;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 19px;
 
   &__container{
     width: 918px;
     margin: auto;
-    display: flex;
-    flex-direction: row;
+    .flex();
     position: relative;
     left: -20.09px;
   }
@@ -36,9 +35,9 @@
     transition: .4s;
     text-align: center;
     font-size: 12px;
-    margin-top: 1px;
+    margin-top: 2px;
     .services__item:hover &{
-      color: #c00;
+      color: @red-hover-link;
     }
   }
 }

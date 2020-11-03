@@ -1,8 +1,20 @@
-// здесь задаем миксины, которые потом можно будет переиспользовать
-
-.flex(@fd, @jc, @ai) {
+.flex(@fd: row, @jc: flex-start, @ai: flex-start) {
     display: flex;
     flex-direction: @fd;
     justify-content: @jc;
     align-items: @ai;
+}
+
+.font(@name, @url, @local, @weight, @style) {
+    @font-face {
+        font-family: @name;
+        src: url('@{url}@{local}.eot');
+        src: local(@local),
+        url('@{url}@{local}.eot?#iefix') format('embedded-opentype'),
+        url('@{url}@{local}.woff2') format('woff2'),
+        url('@{url}@{local}.woff') format('woff'),
+        url('@{url}@{local}.ttf') format('truetype');
+        font-weight: @weight;
+        font-style: @style;
+    }
 }

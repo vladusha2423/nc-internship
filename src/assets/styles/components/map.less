@@ -2,29 +2,21 @@
   &__title{
     .flex(row, flex-start, flex-end);
   }
-  &__main-title{
+
+  &__main-title {
     font-weight: 500;
-    color: #0054b9;
-  }
-  &__add-title{
-    margin-left: 12px;
-    font-size: 13px;
-    color: #0054b9;
+    color: @blue-widget-title;
+    letter-spacing: 0.1px;
   }
   &__content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  &__value{
-    font-size: 28px;
+    .flex(row, flex-start, center);
   }
   &__text{
-    margin-top: 10px;
+    margin-top: 8px;
     .flex(row, flex-start, center);
     font-size: 13px;
     div:not(:nth-child(1)){
-      margin-left: 10px;
+      margin-left: 12px;
     }
   }
 }
