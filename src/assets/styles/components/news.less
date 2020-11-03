@@ -14,6 +14,8 @@
     color: @light-blue-widget-title;
     margin-right: 12px;
     letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: 0.3s;
 
     &:nth-child(1){
       color: @blue-widget-title;
@@ -24,6 +26,9 @@
       color: @orange-widget-title;
       font-size: 13px;
       margin-top: 1px;
+    }
+    &:hover{
+      color: @red-hover-link;
     }
   }
   &__time{
@@ -47,6 +52,11 @@
   }
   &__list-text{
     display: inline;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+      color: @red-hover-link;
+    }
   }
   &__list-item{
     position: relative;

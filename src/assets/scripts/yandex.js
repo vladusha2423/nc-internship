@@ -41,10 +41,12 @@ let services = [
     },
 ]
 for(let i = 0; i < services.length; i++){
-    let serviceItem = `<div class="services__item">
+    let serviceItem = `<a href="">
+                        <div class="services__item">
                             <div class="services__image" style="background-image: ${services[i].backgroundImage}"></div>
                             <div class="services__title">${services[i].title}</div>
-                        </div>`
+                        </div>
+                        </a>`
     let serviceParent = document.getElementsByClassName('services__container')[0];
     serviceParent.insertAdjacentHTML('beforeend', serviceItem);
 }
