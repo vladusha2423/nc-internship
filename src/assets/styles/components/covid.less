@@ -10,6 +10,47 @@
     transform: translateX(-20px);
   }
 
+  &__fix-container{
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    cursor: default;
+  }
+
+  &__fix-icon{
+    margin-top: 10px;
+    margin-left: 8px;
+    transition: 0.4s;
+    opacity: 0;
+    cursor: pointer;
+
+    i{
+      font-size: 13px;
+      color: @light-gray-headline-icon;
+      transition: 0.2s;
+      &:hover{
+        color: #666666;
+      }
+      &:active{
+        color: #3b3b3b;
+      }
+    }
+
+    &._visible{
+      opacity: 1;
+    }
+  }
+
+  &:hover &__fix-icon{
+    opacity: 1;
+  }
+
+  &._fixed{
+    transform: translateX(-20px);
+  }
+
   &__content{
     width: calc(100% - 24px);
     height: calc(100% - 20px);
