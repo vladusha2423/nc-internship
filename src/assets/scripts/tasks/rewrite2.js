@@ -17,9 +17,8 @@ async function loadJson(url) {
     throw new HttpError(response);
 }
 
-// Запрашивать логин, пока github не вернёт существующего пользователя.
 function demoGithubUser() {
-    while(true){
+    while(true)
         try{
             let name = 'vladusha2423';
             let user = loadJson(`https://api.github.com/users/${name}`);
@@ -27,30 +26,11 @@ function demoGithubUser() {
             return user;
         }
         catch(error){
-            if(error instanceof HttpError && error.response.status == 404){
+            if(error instanceof HttpError && error.response.status == 404)
                 console.log("Такого пользователя не существует, пожалуйста, повторите ввод.");
-            }
-            else{
+            else
                 throw error;
-            }
         }
-    }
-
-    // let name = prompt("Введите логин?", "iliakan");
-    //
-    // return loadJson(`https://api.github.com/users/${name}`)
-    //     .then(user => {
-    //         alert(`Полное имя: ${user.name}.`);
-    //         return user;
-    //     })
-    //     .catch(err => {
-    //         if (err instanceof HttpError && err.response.status == 404) {
-    //             alert("Такого пользователя не существует, пожалуйста, повторите ввод.");
-    //             return demoGithubUser();
-    //         } else {
-    //             throw err;
-    //         }
-    //     });
 }
 
 (async () => {
