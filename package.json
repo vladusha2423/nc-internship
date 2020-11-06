@@ -13,8 +13,10 @@
   "dependencies": {
     "browser-sync": "^2.26.13",
     "express": "^4.17.1",
+    "fetch": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-less": "^4.0.1"
+    "gulp-less": "^4.0.1",
+    "node-fetch": "^2.6.1"
   }
 }
