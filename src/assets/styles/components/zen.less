@@ -1,0 +1,140 @@
+.zen{
+  width: 100%;
+  font-family: @font-yandex;
+  margin-top: 20px;
+
+  &__container{
+    width: 918px;
+    margin: auto;
+  }
+  &__title-bar{
+    .flex(row, flex-start, flex-end);
+  }
+  &__title-text{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+  &__title-desc{
+    font-size: 15px;
+    opacity: .4;
+    margin-left: 20px;
+    line-height: 20px;
+  }
+  &__content{
+    .flex(row, space-between, flex-start, wrap);
+    margin-top: 20px;
+  }
+  &__card{
+    .flex(column-reverse, flex-start, flex-start);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px 0px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    position: relative;
+    &._small{
+      width: 299px;
+      height: 316px;
+    }
+    &._big{
+      .flex(row, flex-start, flex-start);
+      width: 607px;
+      height: 316px;
+    }
+  }
+  &__card-content{
+    padding: 0 23px 12px 23px;
+    position: relative;
+    z-index: 1;
+    background: black;
+    .flex(column-reverse, flex-start, flex-start);
+    max-height: 50%;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: calc(100% - 46px);
+    ._big &{
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 12px 23px;
+      max-height: 100%;
+      width: calc(90% - 46px);
+      height: calc(100% - 24px);
+      .flex(column-reverse, space-between, flex-start);
+    }
+  }
+  &__card-title{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 10px;
+    ._big &{
+      margin-top: 10px;
+    }
+  }
+  &__card-desc{
+    color: white;
+    opacity: .6;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  &__card-footer{
+    width: 100%;
+    .flex(row, space-between, center);
+    color: white;
+    margin-bottom: 5px;
+  }
+  &__card-category{
+    font-size: 14px;
+    font-weight: 700;
+    opacity: .6;
+  }
+  &__card-controls{
+    .flex(row, flex-start, center);
+  }
+  &__icon{
+    margin-left: 9px;
+    margin-right: 9px;
+    &:nth-child(3){
+      margin-right: 0;
+    }
+  }
+  &__icon_like{
+    svg{
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+    opacity: .6;
+
+    &._reverse{
+      transform: rotate(180deg);
+    }
+  }
+  &__icon_comment{
+    border-radius: 5px 5px 0 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 10px;
+    height: 12px;
+    background: white;
+    opacity: .6;
+
+  }
+
+  &__card-image{
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7931547619047619) 7%, rgba(255,255,255,0) 100%), url("https://thevyshka.ru/wp-content/uploads/2020/02/oblozka.gif") center center / cover;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    ._big &{
+      border-top-left-radius: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7931547619047619) 7%, rgba(255,255,255,0) 100%), url("https://thevyshka.ru/wp-content/uploads/2020/02/oblozka.gif") center center / cover;
+    }
+  }
+}

@@ -3,7 +3,7 @@ function fixCovid(){
     covid.classList.toggle('_fixed');
     let covidIcon = document.querySelector('.covid__fix-icon');
     covidIcon.classList.toggle('_visible');
-
+    
     if(covidIcon.children[0].classList.contains('fa-lock-open')){
         covidIcon.children[0].classList.remove('fa-lock-open');
         covidIcon.children[0].classList.add('fa-lock');
