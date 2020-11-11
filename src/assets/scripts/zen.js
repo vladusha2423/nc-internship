@@ -12,7 +12,7 @@ let data = [
         "id": 1120,
         "title": "Личный опыт: студенты-асексуалы",
         "description": "Студенты нескольких российских вузов рассказали о том, как их асексуальная ориентация повлияла на их отношения и студенчество",
-        "image": "http://thevyshka.styleru.org/uploads/2020/10/oblozhka-1-1050x500.jpg",
+        "image": "https://thevyshka.ru/wp-content/uploads/2020/02/oblozhka-vk.jpg",
         "categories": [
             {
                 "id": 1,
@@ -26,7 +26,7 @@ let data = [
         "id": 1119,
         "title": "Панда)))",
         "description": "Панда бело-черная и очень милая",
-        "image": "http://thevyshka.styleru.org/uploads/2020/10/20171109677.jpg",
+        "image": "https://thevyshka.ru/wp-content/uploads/2020/02/oblozhka-1.jpg",
         "categories": [
             {
                 "id": 1,
@@ -54,7 +54,7 @@ let data = [
         "id": 1113,
         "title": "Щас бы тяночку, да пива баночку",
         "description": "Это мы тестим, потом удалим(наверное)",
-        "image": "http://thevyshka.styleru.org/uploads/2020/10/E48C40F3-3B75-47F8-A370-779D48083D73.jpeg",
+        "image": "https://thevyshka.ru/wp-content/uploads/2020/02/bvsru-2.jpg",
         "categories": [
             {
                 "id": 7,
