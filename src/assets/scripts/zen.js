@@ -7,27 +7,21 @@ function randomInt(min, max) {
     return min + Math.floor((max - min) * Math.random());
 }
 
-function offset(el){
-    let rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-}
-
-// function getGeneralColor(url){
-//     RGBaster.colors(url, {
+// async function getGeneralColor(url){
+//     let generalColor = 'kek';
+//     await RGBaster.colors(url, {
 //         // Не учитывать белый цвет
 //         exclude: ['rgb(255,255,255)'],
 //         success: function(payload) {
-//             // console.log(payload.dominant);  // Преобладающий цвет
-//             // console.log(payload.secondary); // Второй по популярности цвет
-//             // console.log(payload.palette);   // Палитра цветов (по умолчанию 30)
-//             // Устанавливаем фоновый цвет равный самому популярному.
-//             return payload.dominant;
+//             console.log(generalColor + 1)
+//             generalColor = payload.dominant;
+//             console.log(generalColor + 2)
 //         }
 //     });
-//     return '';
+//     console.log(generalColor + 3)
+//     return generalColor;
 // }
+
 
 async function generateZen(){
     let response = await fetch(URL + `${postsCount + 1}-${postsCount + 5}`);
@@ -91,14 +85,18 @@ async function generateZen(){
     await generateZen();
 })();
 
-
+function offsetX(el){
+    let rect = el.getBoundingClientRect(),
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return rect.top + scrollTop
+}
 
 let scrollCheck = async function() {
     let zenCards = document.querySelectorAll('.zen__card');
-    let lastZenCard = zenCards[zenCards.length - 1];
+    let lastZenCard = zenCards[zenCards.length - 5];
 
     let scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
-    if (scrollTop >= offset(lastZenCard).top - window.innerHeight) {
+    if (scrollTop >= offsetX(lastZenCard) - window.innerHeight) {
         window.removeEventListener('scroll', scrollCheck);
         await generateZen();
     }
