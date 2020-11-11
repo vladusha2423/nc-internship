@@ -7,36 +7,91 @@ function randomInt(min, max) {
     return min + Math.floor((max - min) * Math.random());
 }
 
-// async function getGeneralColor(url){
-//     let generalColor = 'kek';
-//     await RGBaster.colors(url, {
-//         // Не учитывать белый цвет
-//         exclude: ['rgb(255,255,255)'],
-//         success: function(payload) {
-//             console.log(generalColor + 1)
-//             generalColor = payload.dominant;
-//             console.log(generalColor + 2)
-//         }
-//     });
-//     console.log(generalColor + 3)
-//     return generalColor;
-// }
-
+let data = [
+    {
+        "id": 1120,
+        "title": "Личный опыт: студенты-асексуалы",
+        "description": "Студенты нескольких российских вузов рассказали о том, как их асексуальная ориентация повлияла на их отношения и студенчество",
+        "image": "http://thevyshka.styleru.org/uploads/2020/10/oblozhka-1-1050x500.jpg",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Мнения",
+                "linkName": "opinions",
+                "postCategory": null
+            },
+        ],
+    },
+    {
+        "id": 1119,
+        "title": "Панда)))",
+        "description": "Панда бело-черная и очень милая",
+        "image": "http://thevyshka.styleru.org/uploads/2020/10/20171109677.jpg",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Мнения",
+                "linkName": "opinions",
+                "postCategory": null
+            },
+        ],
+    },
+    {
+        "id": 1115,
+        "title": "Свайп влево, свайп вправо",
+        "description": "Тиндер помогает многим найти друзей, партнера или компанию на любое мероприятие. Мы поговорили со студентами разных вузов об образах университетов в Тиндере и об их опыте использования приложения.",
+        "image": "http://thevyshka.ru/wp-content/uploads/2019/12/sxuuhtqnxr8.jpg",
+        "categories": [
+            {
+                "id": 6,
+                "name": "Спецпроекты",
+                "linkName": "special",
+                "postCategory": null
+            }
+        ],
+    },
+    {
+        "id": 1113,
+        "title": "Щас бы тяночку, да пива баночку",
+        "description": "Это мы тестим, потом удалим(наверное)",
+        "image": "http://thevyshka.styleru.org/uploads/2020/10/E48C40F3-3B75-47F8-A370-779D48083D73.jpeg",
+        "categories": [
+            {
+                "id": 7,
+                "name": "Фотопроекты",
+                "linkName": "photo",
+                "postCategory": null
+            }
+        ]
+    },
+    {
+        "id": 1112,
+        "title": "Не кодом единым: какие приложения разрабатывают студенты",
+        "description": "Рассказываем про студентов, которые решили сами разработать приложения для смартфонов.",
+        "linkName": "coding-apps",
+        "image": "https://thevyshka.ru/wp-content/uploads/2020/02/oblozka.gif",
+        "categories": [
+            {
+                "id": 1,
+                "name": "Мнения",
+                "linkName": "opinions",
+                "postCategory": null
+            }
+        ]
+    }
+]
 
 async function generateZen(){
-    let response = await fetch(URL + `${postsCount + 1}-${postsCount + 5}`);
-    if(response.ok){
-        let data = await response.json();
-        let bigCardIndex = BIG_CARD_INDEXES[randomInt(0,3)];
-        let zenContent = document.querySelector('.zen__content');
+    let bigCardIndex = BIG_CARD_INDEXES[randomInt(0,3)];
+    let zenContent = document.querySelector('.zen__content');
 
-        data.posts.forEach((post, i) => {
-            let backgroundImage = `linear-gradient(${i === bigCardIndex ? '9' : ''}0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7931547619047619) 7%, rgba(255,255,255,0) 100%), url(\'${post.image}\') center center / cover`
-            console.log(backgroundImage);
+    data.forEach((post, i) => {
+        let backgroundImage = `linear-gradient(${i === bigCardIndex ? '9' : ''}0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7931547619047619) 7%, rgba(255,255,255,0) 100%), url(\'${post.image}\') center center / cover`
+        console.log(backgroundImage);
 
 
 
-            let zenCard = `
+        let zenCard = `
 <div class="zen__card ${i !== bigCardIndex ? '_small' : '_big'}">
     <div class="zen__card-content">
         <div class="zen__card-footer">
@@ -68,17 +123,13 @@ async function generateZen(){
     </div>
     <div class="zen__card-image" style="background: ${backgroundImage}"></div>
 </div>
-            `;
-            zenContent.insertAdjacentHTML('beforeend', zenCard);
-        });
+        `;
+        zenContent.insertAdjacentHTML('beforeend', zenCard);
+    });
 
 
-        window.addEventListener('scroll', scrollCheck);
-        postsCount += 5;
-    }
-    else{
-        alert('Ошибка загрузки статей');
-    }
+    window.addEventListener('scroll', scrollCheck);
+    postsCount += 5;
 }
 
 (async () => {
@@ -91,13 +142,13 @@ function offsetX(el){
     return rect.top + scrollTop
 }
 
-let scrollCheck = async function() {
+async function scrollCheck() {
     let zenCards = document.querySelectorAll('.zen__card');
     let lastZenCard = zenCards[zenCards.length - 5];
 
     let scrollTop = window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop;
     if (scrollTop >= offsetX(lastZenCard) - window.innerHeight) {
         window.removeEventListener('scroll', scrollCheck);
-        await generateZen();
+        await setTimeout(generateZen, 1000);
     }
 };
